@@ -4,6 +4,7 @@ __author__ = "730579095"
 
 import random
 
+"""These are the global variables I implemented that I used throughout the program"""
 ROCK_EMOJI = "\U0001F44A"
 PAPER_EMOJI = "\U0001F91A"
 SCISSOR_EMOJI = "\U0001F596"
@@ -12,6 +13,7 @@ points: int
 CHOICES: list[str] = ["Rock", "Paper", "Scissors"]
 
 def greet() -> None:
+    """This greet() function updates the global variable player """
     global player
     player = input("Nice to meet you! What's your name?: ")
     print(f"Hey {player} how are you? Let's play play rock{ROCK_EMOJI}, paper{PAPER_EMOJI}, scissors{SCISSOR_EMOJI}")
@@ -20,6 +22,7 @@ import random
 
 
 def play_rps() -> None:
+    """This program asks the user for R,P, or S and then computer random generates a R, P, S and uses if statements to test who won the game"""
     global points
     player_choice: str = input(f"Thanks for choosing to play rock, paper, scissors with me {player}! What do you choose? ('Rock' {ROCK_EMOJI}, 'Paper' {PAPER_EMOJI}, 'Scissors' {SCISSOR_EMOJI}): ")
     points += 1
@@ -107,7 +110,3 @@ def main() -> None:
 
 if __name__ == "__main__":
   main()
-
-
-
-
